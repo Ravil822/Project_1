@@ -22,14 +22,14 @@ function addstrat(){
     if(total_pctg===100&&strat_name.length>0&&strat_name.length<=10&&strat_desc.length>0&&strat_desc.length<=50){
         // all validations passed, then create the new variable
         var new_strategy={  name: strat_name ,
-        desc: strat_desc,
-        adx_wgth: total_adx,
-        rsi_wgth: total_rsi,
-        srsi_wgth: total_srsi,
-        mom_wgth: total_mom,
-        date_created:  moment().format('L'),
-        date_edited:  moment().format('L'),
-        date_used:  moment().format('L')  }
+                            desc: strat_desc,
+                            adx_wgth: total_adx,
+                            rsi_wgth: total_rsi,
+                            srsi_wgth: total_srsi,
+                            mom_wgth: total_mom,
+                            date_created:  moment().format('L'),
+                            date_edited:  moment().format('L'),
+                            date_used:  moment().format('L')  }
 
         // Geting information from local storage
         var all_strategies=JSON.parse(localStorage.getItem("strategies"));
@@ -72,12 +72,12 @@ function addstrat(){
 
 
     } else{
-       alert("sending error")
+
         // setting the new strategy name
         var error_message="";
         if(total_pctg!==100){error_message="Total weights should add 100%, not "+total_pctg+"%.  "};
-        if(strat_name.length=0||strat_name.length>10){error_message=error_message+"Strategy name needs to be 1-10 characters, not "+strat_name.length+".  "};
-        if(strat_desc.length=0||strat_desc.length>50){error_message=error_message+"Strategy description needs to be 1-10 characters, not "+strat_desc.length+"."};
+        if(strat_name.length===0||strat_name.length>10){error_message=error_message+"Strategy name needs to be 1-10 characters, not "+strat_name.length+".  "};
+        if(strat_desc.length===0||strat_desc.length>50){error_message=error_message+"Strategy description needs to be 1-10 characters, not "+strat_desc.length+"."};
 
         // delivering the message, going back to the page, doesn't change anything
 
@@ -108,14 +108,7 @@ function addstrat(){
                     $("#mom-pctg").html("25%");
                     $("#strat-name").focus();
                     }
-                },
-                close: {
-                    text:"go back",
-                    btnClass: 'btn-red', 
-                    action: function () {
-                    $("#strat-name").focus();
-                    }
-               }
+                }
              }
             });  // jquery confirm
         //  Returns without doing anything
