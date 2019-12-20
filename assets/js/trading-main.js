@@ -1,44 +1,121 @@
+//***************************************************************************************/
+//  The following function calls the code so that the selected strategy can be edited
+//***************************************************************************************/
+
 function editStrategy(){
+    // finding the strategy that was checked
     var slected = $('#TradingStrategiesList').find('.selected');
-    if(slected.length!==0){console.log(slected[0].sectionRowIndex)}
-    else {console.log("none selected")}
-}
+    if(slected.length!==0){  // Which strategy was originally selected
+
+        $.alert({
+            title: 'Alert!',
+            content: 'nothing here for now.  Will run the functionality for editing a strategy!',
+        });
+
+    }
+    else {  // No strategy selected, returns
+
+        // Sending message
+            $.confirm({
+                icon: 'fa fa-warning',
+                title: 'Data needed',
+                content: 'Please select a strategy so that I know which one you would like to edit.',
+                type: 'red',
+                typeAnimated: true,
+                buttons: { tryAgain: {text: 'Start over',btnClass: 'btn-red', action: function(){} }        }
+                });  // jquery confirm
+
+            // exits the routine without doing anything
+            return;
+    } // else
+}  // End of function editStrategy
+
+//***************************************************************************************/
+//  The following function calls the code so that the selected strategy can be deleted
+//***************************************************************************************/
 
 function deleteStrategy(){
-    alert("Delete a new strategy")
+    // finding the strategy that was checked
+    var slected = $('#TradingStrategiesList').find('.selected');
+    if(slected.length!==0){  // Which strategy was originally selected
+
+        $.alert({
+            title: 'Alert!',
+            content: 'nothing here for now.  Will run the functionality to delete a strategy!',
+        });
+
+
+    }
+    else {  // No strategy selected, returns
+
+        // Sending message
+            $.confirm({
+                icon: 'fa fa-warning',
+                title: 'Data needed',
+                content: 'Please select a strategy so that I know which strategy you want to delete.',
+                type: 'red',
+                typeAnimated: true,
+                buttons: { tryAgain: {text: 'Start over',btnClass: 'btn-red', action: function(){} }        }
+                });  // jquery confirm
+
+            // exits the routine without doing anything
+            return;
+    } // else
 }
 
 function runStrategy(){
     // finding the strategy that was checked
     var slected = $('#TradingStrategiesList').find('.selected');
     if(slected.length!==0){  // Which strategy was originally selected
-        console.log(slected[0].sectionRowIndex)}
+
+        $.alert({
+            title: 'Alert!',
+            content: 'nothing here for now.  Will make IEX API calls!',
+        });
+
+    }
     else {  // No strategy selected, returns
 
+        // Sending message
+            $.confirm({
+                icon: 'fa fa-warning',
+                title: 'Data needed',
+                content: 'Please select a strategy so that I know how you want to analyze stocks.',
+                type: 'red',
+                typeAnimated: true,
+                buttons: { tryAgain: {text: 'Start over',btnClass: 'btn-red', action: function(){} }        }
+                });  // jquery confirm
 
-// ************************
+            // exits the routine without doing anything
+            return;
 
-$.confirm({
-    title: 'Error',
-    content: 'Please select a strategy before continuing.  If no strategies are available, please add one.',
-    type: 'red',
-    typeAnimated: true,
-    buttons: {
-        tryAgain: {
-            text: 'Start over',
-            btnClass: 'btn-red',
-            action: function(){}     }
-     }
-    });  // jquery confirm
+    } // else
 
-//********************************* */
-
-        } // else
+    // Loading the new 
 
 }  // end of function runStrategy()
 
+//*******************************************************************************/
+//  The following code checks if a selection has been made.  If it does, it
+//  enables the edit strategy, delete strategy, and run strategy buttons 
+//*******************************************************************************/
 
-// Loading all available strategies into the table
+function check_selection(){
+
+    console.log("here")
+
+    var slected = $('#TradingStrategiesList').find('.selected');
+    console.log(slected.length)
+    if(slected.length!==0){  // Which strategy was originally selected
+
+        $("#editStrategy").prop("disabled",false)
+    }
+}
+
+
+//*******************************************************************************/
+// Main functionality.  The following code will be run automatically 
+//*******************************************************************************/
 
 var all_strategies=JSON.parse(localStorage.getItem("strategies"));
 
@@ -66,5 +143,4 @@ $("#addStrategy").attr("onclick","window.location.href='trading-main-add.html'")
 $("#editStrategy").on("click",editStrategy);
 $("#deleteStrategy").on("click",deleteStrategy);
 $("#runStrategy").on("click",runStrategy);
-
 //
