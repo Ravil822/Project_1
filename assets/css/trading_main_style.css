@@ -1,0 +1,17 @@
+.body { 
+    background-color: bisque;
+}
+
+.scrollable-table {
+    max-height:100px;
+}
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+    }
+
+.table-wrapper-scroll-y {
+    display: block;
+    }
