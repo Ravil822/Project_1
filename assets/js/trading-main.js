@@ -143,4 +143,18 @@ $("#addStrategy").attr("onclick","window.location.href='trading-main-add.html'")
 $("#editStrategy").on("click",editStrategy);
 $("#deleteStrategy").on("click",deleteStrategy);
 $("#runStrategy").on("click",runStrategy);
-//
+
+
+// When strategy is selected, then enable buttons
+$(document).on("click",".select-checkbox",function(){
+
+    $("#runStrategy").attr("disabled",false);
+    $("#run-str-fnt").attr("class","fas fa-2x fa-fighter-jet mt-0")
+
+    $("#editStrategy").attr("disabled",false);
+    $("#edt-str-fnt").attr("class","fas fa-2x fa-pencil-alt mt-0")
+
+    $("#deleteStrategy").attr("disabled",false);
+    $("#dlt-str-fnt").attr("class","far fa-2x fa-trash-alt mt-0")
+
+})
