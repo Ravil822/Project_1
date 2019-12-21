@@ -50,11 +50,6 @@ function getStocks(){
 }  // end of function getStocks
 
 
-
-
-
-
-
 //*******************************************************************/
 //  Calling IEX API for each stock, getting financial information
 //*******************************************************************/
@@ -101,9 +96,6 @@ function getFinancialData(){
 
 
 }  // end of function getAPIData
-
-
-
 
 
 //***************************************************************** */
