@@ -534,45 +534,48 @@ function getFinancialData(){
     //  Will get financial data for all stocks
     var total_stocks=stock_list.length;
     var rsplng=0;
-    var base_url="https://sandbox.iexapis.com/stable/stock/"
+    var base_url="https://sandbox.iexapis.com/stable/stock/";
     var api_token="Tsk_c7a9b5b07a7d4570afb668eccf02054b";
 
-    for(var i=0;i<10;i++){
+    for(var i=0;i<2;i++){
 
     //  Makes 4 API calls to get the data from API server AIX
         var APIquery=base_url+stock_list[i].tickler+"/indicator/adx?range=6m&token="+api_token;
-        $.ajax({url:APIquery,method:"GET"}).then(function(finrsp){
+console.log(APIquery);
+        $.ajax({async: false,url:APIquery,method:"GET"}).then(function(finrsp){
               rsplng=finrsp.indicator[0].length;
               stock_list[i].adx=finrsp.indicator[0][rsplng-1];
-              console.log(stock_list[i]);
               localStorage.setItem("LSstock_list",JSON.stringify(stock_list));
               total_call_returns++;
               console.log("counter ",total_call_returns);
-              console.log("i ",i);
+              console.log(finrsp);
             });
         var APIquery=base_url+stock_list[i].tickler+"/indicator/rsi?range=6m&token="+api_token;
-        $.ajax({url:APIquery,method:"GET"}).then(function(finrsp){
+        $.ajax({async: false,url:APIquery,method:"GET"}).then(function(finrsp){
             rsplng=finrsp.indicator[0].length;
               stock_list[i].rsi=finrsp.indicator[0][rsplng-1];
               localStorage.setItem("LSstock_list",JSON.stringify(stock_list));
               total_call_returns++;
-              console.log(total_call_returns);
+              console.log("counter ",total_call_returns);
+              console.log(finrsp);
             });
         var APIquery=base_url+stock_list[i].tickler+"/indicator/stochrsi?range=6m&token="+api_token;
-        $.ajax({url:APIquery,method:"GET"}).then(function(finrsp){
+        $.ajax({async: false,url:APIquery,method:"GET"}).then(function(finrsp){
               rsplng=finrsp.indicator[0].length;
               stock_list[i].srsi=finrsp.indicator[0][rsplng-1];
               localStorage.setItem("LSstock_list",JSON.stringify(stock_list));
               total_call_returns++;
-              console.log(total_call_returns);
+              console.log("counter ",total_call_returns);
+              console.log(finrsp);
             });
         var APIquery=base_url+stock_list[i].tickler+"/indicator/mom?range=6m&token="+api_token;
-        $.ajax({url:APIquery,method:"GET"}).then(function(finrsp){
+        $.ajax({async: false,url:APIquery,method:"GET"}).then(function(finrsp){
               rsplng=finrsp.indicator[0].length;
               stock_list[i].mom=finrsp.indicator[0][rsplng-1];
               localStorage.setItem("LSstock_list",JSON.stringify(stock_list));
               total_call_returns++;
-              console.log(total_call_returns);
+              console.log("counter ",total_call_returns);
+              console.log(finrsp);
             });
     }
 
