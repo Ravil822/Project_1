@@ -25,7 +25,7 @@ function getStocks(){
         stock_list.push({tickler:'AAP',name:'Advance Auto Parts',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'AMD',name:'Advanced Micro Devices Inc',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'AES',name:'AES Corp',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
-        stock_list.push({tickler:'AET',name:'Aetna Inc',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
+      //   stock_list.push({tickler:'AET',name:'Aetna Inc',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'AMG',name:'Affiliated Managers Group Inc',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'AFL',name:'AFLAC Inc',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'A',name:'Agilent Technologies Inc',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
@@ -59,7 +59,7 @@ function getStocks(){
         stock_list.push({tickler:'APH',name:'Amphenol Corp',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'APC',name:'Anadarko Petroleum Corp',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'ADI',name:'Analog Devices, Inc.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
-        stock_list.push({tickler:'ANDV',name:'Andeavor',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
+      //   stock_list.push({tickler:'ANDV',name:'Andeavor',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'ANSS',name:'ANSYS',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'ANTM',name:'Anthem Inc.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'AON',name:'Aon plc',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
@@ -99,7 +99,7 @@ function getStocks(){
         stock_list.push({tickler:'AVGO',name:'Broadcom',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'BF.B',name:'Brown-Forman Corp.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'CHRW',name:'C. H. Robinson Worldwide',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
-        stock_list.push({tickler:'CA',name:'CA, Inc.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
+      //   stock_list.push({tickler:'CA',name:'CA, Inc.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'COG',name:'Cabot Oil & Gas',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'CDNS',name:'Cadence Design Systems',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'CPB',name:'Campbell Soup',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
@@ -147,7 +147,7 @@ function getStocks(){
         stock_list.push({tickler:'COST',name:'Costco Wholesale Corp.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'COTY',name:'Coty, Inc',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'CCI',name:'Crown Castle International Corp.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
-        stock_list.push({tickler:'CSRA',name:'CSRA Inc.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
+      //   stock_list.push({tickler:'CSRA',name:'CSRA Inc.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'CSX',name:'CSX Corp.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'CMI',name:'Cummins Inc.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'CVS',name:'CVS Health',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
@@ -169,7 +169,7 @@ function getStocks(){
         stock_list.push({tickler:'D',name:'Dominion Energy',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'DOV',name:'Dover Corp.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'DWDP',name:'DowDuPont',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
-        stock_list.push({tickler:'DPS',name:'Dr Pepper Snapple Group',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
+      //   stock_list.push({tickler:'DPS',name:'Dr Pepper Snapple Group',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'DTE',name:'DTE Energy Co.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'DUK',name:'Duke Energy',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'DRE',name:'Duke Realty Corp',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
@@ -184,7 +184,7 @@ function getStocks(){
         stock_list.push({tickler:'EA',name:'Electronic Arts',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'EMR',name:'Emerson Electric Company',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'ETR',name:'Entergy Corp.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
-        stock_list.push({tickler:'EVHC',name:'Envision Healthcare',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
+      //   stock_list.push({tickler:'EVHC',name:'Envision Healthcare',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'EOG',name:'EOG Resources',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'EQT',name:'EQT Corporation',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'EFX',name:'Equifax Inc.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
@@ -197,7 +197,7 @@ function getStocks(){
         stock_list.push({tickler:'EXC',name:'Exelon Corp.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'EXPE',name:'Expedia Inc.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'EXPD',name:'Expeditors International',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
-        stock_list.push({tickler:'ESRX',name:'Express Scripts',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
+      //   stock_list.push({tickler:'ESRX',name:'Express Scripts',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'EXR',name:'Extra Space Storage',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'XOM',name:'Exxon Mobil Corp.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'FFIV',name:'F5 Networks',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
@@ -224,7 +224,7 @@ function getStocks(){
         stock_list.push({tickler:'IT',name:'Gartner Inc',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'GD',name:'General Dynamics',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'GE',name:'General Electric',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
-        stock_list.push({tickler:'GGP',name:'General Growth Properties Inc.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
+      //   stock_list.push({tickler:'GGP',name:'General Growth Properties Inc.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'GIS',name:'General Mills',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'GM',name:'General Motors',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'GPC',name:'Genuine Parts',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
@@ -296,7 +296,7 @@ function getStocks(){
         stock_list.push({tickler:'LRCX',name:'Lam Research',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'LEG',name:'Leggett & Platt',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'LEN',name:'Lennar Corp.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
-        stock_list.push({tickler:'LUK',name:'Leucadia National Corp.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
+      //   stock_list.push({tickler:'LUK',name:'Leucadia National Corp.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'LLY',name:'Lilly (Eli) & Co.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'LNC',name:'Lincoln National',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'LKQ',name:'LKQ Corporation',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
@@ -331,7 +331,7 @@ function getStocks(){
         stock_list.push({tickler:'MHK',name:'Mohawk Industries',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'TAP',name:'Molson Coors Brewing Company',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'MDLZ',name:'Mondelez International',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
-        stock_list.push({tickler:'MON',name:'Monsanto Co.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
+      //   stock_list.push({tickler:'MON',name:'Monsanto Co.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'MNST',name:'Monster Beverage',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'MCO',name:'Moodys Corp',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'MS',name:'Morgan Stanley',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
@@ -412,14 +412,14 @@ function getStocks(){
         stock_list.push({tickler:'RMD',name:'ResMed',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'RHI',name:'Robert Half International',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'ROK',name:'Rockwell Automation Inc.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
-        stock_list.push({tickler:'COL',name:'Rockwell Collins',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
+      //   stock_list.push({tickler:'COL',name:'Rockwell Collins',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'ROP',name:'Roper Technologies',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'ROST',name:'Ross Stores',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'RCL',name:'Royal Caribbean Cruises Ltd',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'SPGI',name:'S&P Global, Inc.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'CRM',name:'Salesforce.com',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'SBAC',name:'SBA Communications',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
-        stock_list.push({tickler:'SCG',name:'SCANA Corp',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
+      //   stock_list.push({tickler:'SCG',name:'SCANA Corp',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'SLB',name:'Schlumberger Ltd.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'STX',name:'Seagate Technology',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'SEE',name:'Sealed Air',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
@@ -459,7 +459,7 @@ function getStocks(){
         stock_list.push({tickler:'DIS',name:'The Walt Disney Company',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'TMO',name:'Thermo Fisher Scientific',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'TIF',name:'Tiffany & Co.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
-        stock_list.push({tickler:'TWX',name:'Time Warner Inc.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
+      //   stock_list.push({tickler:'TWX',name:'Time Warner Inc.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'TJX',name:'TJX Companies Inc.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'TMK',name:'Torchmark Corp.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'TSS',name:'Total System Services',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
@@ -508,19 +508,17 @@ function getStocks(){
         stock_list.push({tickler:'WHR',name:'Whirlpool Corp.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'WMB',name:'Williams Cos.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'WLTW',name:'Willis Towers Watson',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
-        stock_list.push({tickler:'WYN',name:'Wyndham Worldwide',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
+      //   stock_list.push({tickler:'WYN',name:'Wyndham Worldwide',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'WYNN',name:'Wynn Resorts Ltd',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'XEL',name:'Xcel Energy Inc',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'XRX',name:'Xerox Corp.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'XLNX',name:'Xilinx Inc',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
-        stock_list.push({tickler:'XL',name:'XL Capital',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
+      //   stock_list.push({tickler:'XL',name:'XL Capital',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'XYL',name:'Xylem Inc.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'YUM',name:'Yum! Brands Inc',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'ZBH',name:'Zimmer Biomet Holdings',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'ZION',name:'Zions Bancorp',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'ZTS',name:'Zoetis',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
-        
-
 
 
         localStorage.setItem("LSstock_list",JSON.stringify(stock_list));
@@ -536,40 +534,47 @@ function getFinancialData(){
     //  Will get financial data for all stocks
     var total_stocks=stock_list.length;
     var rsplng=0;
+    var base_url="https://sandbox.iexapis.com/stable/stock/"
+    var api_token="Tsk_c7a9b5b07a7d4570afb668eccf02054b";
 
-    // for(var i=0;i<total_stocks;i++){
+    for(var i=0;i<10;i++){
 
     //  Makes 4 API calls to get the data from API server AIX
-        var APIquery="https://cloud.iexapis.com/stable/stock/"+stock_list[0].tickler+"/indicator/adx?range=6m&token=pk_b38152a336f24abcb3cc369bf985f4d3";
+        var APIquery=base_url+stock_list[i].tickler+"/indicator/adx?range=6m&token="+api_token;
         $.ajax({url:APIquery,method:"GET"}).then(function(finrsp){
               rsplng=finrsp.indicator[0].length;
-              console.log(finrsp.indicator[0][rsplng-1], typeof finrsp.indicator[0][rsplng-1])
-              stock_list[0].adx=finrsp.indicator[0][rsplng-1];
-        });
-        var APIquery="https://cloud.iexapis.com/stable/stock/"+stock_list[0].tickler+"/indicator/rsi?range=6m&token=pk_b38152a336f24abcb3cc369bf985f4d3";
+              stock_list[i].adx=finrsp.indicator[0][rsplng-1];
+              console.log(stock_list[i]);
+              localStorage.setItem("LSstock_list",JSON.stringify(stock_list));
+              total_call_returns++;
+              console.log("counter ",total_call_returns);
+              console.log("i ",i);
+            });
+        var APIquery=base_url+stock_list[i].tickler+"/indicator/rsi?range=6m&token="+api_token;
+        $.ajax({url:APIquery,method:"GET"}).then(function(finrsp){
+            rsplng=finrsp.indicator[0].length;
+              stock_list[i].rsi=finrsp.indicator[0][rsplng-1];
+              localStorage.setItem("LSstock_list",JSON.stringify(stock_list));
+              total_call_returns++;
+              console.log(total_call_returns);
+            });
+        var APIquery=base_url+stock_list[i].tickler+"/indicator/stochrsi?range=6m&token="+api_token;
         $.ajax({url:APIquery,method:"GET"}).then(function(finrsp){
               rsplng=finrsp.indicator[0].length;
-              stock_list[0].rsi=finrsp.indicator[0][rsplng-1];
-        });
-        var APIquery="https://cloud.iexapis.com/stable/stock/"+stock_list[0].tickler+"/indicator/stochrsi?range=6m&token=pk_b38152a336f24abcb3cc369bf985f4d3";
+              stock_list[i].srsi=finrsp.indicator[0][rsplng-1];
+              localStorage.setItem("LSstock_list",JSON.stringify(stock_list));
+              total_call_returns++;
+              console.log(total_call_returns);
+            });
+        var APIquery=base_url+stock_list[i].tickler+"/indicator/mom?range=6m&token="+api_token;
         $.ajax({url:APIquery,method:"GET"}).then(function(finrsp){
               rsplng=finrsp.indicator[0].length;
-              stock_list[0].srsi=finrsp.indicator[0][rsplng-1];
-        });
-        var APIquery="https://cloud.iexapis.com/stable/stock/"+stock_list[0].tickler+"/indicator/mom?range=6m&token=pk_b38152a336f24abcb3cc369bf985f4d3";
-        $.ajax({url:APIquery,method:"GET"}).then(function(finrsp){
-              rsplng=finrsp.indicator[0].length;
-              stock_list[0].mom=finrsp.indicator[0][rsplng-1];
-        });
-
-
-    // }
-
-    // Saves data to local storage
-    stock_list[1].adx=30.1111;
-    // localStorage.removeItem("LSstock_list");
-    localStorage.setItem("LSstock_list",JSON.stringify(stock_list));
-
+              stock_list[i].mom=finrsp.indicator[0][rsplng-1];
+              localStorage.setItem("LSstock_list",JSON.stringify(stock_list));
+              total_call_returns++;
+              console.log(total_call_returns);
+            });
+    }
 
 
 }  // end of function getAPIData
@@ -579,6 +584,7 @@ function getFinancialData(){
 // Main program functionality 
 //***************************************************************** */
 
+var total_call_returns=0;
 var stock_list=[];   // global variable, array that contains stock data
 getStocks();         // loading the stocks that will be analyzed
 getFinancialData();  // Getting data from AIX via API calling
