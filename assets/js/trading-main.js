@@ -140,7 +140,7 @@ if(all_strategies!==null){
 
 // Assigning click events to all buttons
 $("#addStrategy").attr("onclick","window.location.href='trading-main-add.html'");
-$("#editStrategy").on("click",editStrategy);
+$("#editStrategy").attr("onclick","window.location.href='trading-main-edit.html'");
 $("#deleteStrategy").on("click",deleteStrategy);
 $("#runStrategy").on("click",runStrategy);
 
