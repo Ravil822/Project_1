@@ -323,7 +323,7 @@ function getStocks(){
         stock_list.push({tickler:'MET',name:'MetLife Inc.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'MTD',name:'Mettler Toledo',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'MGM',name:'MGM Resorts International',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
-        stock_list.push({tickler:'KORS',name:'Michael Kors Holdings',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
+        // stock_list.push({tickler:'KORS',name:'Michael Kors Holdings',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'MCHP',name:'Microchip Technology',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'MU',name:'Micron Technology',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'MSFT',name:'Microsoft Corp.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
@@ -344,7 +344,7 @@ function getStocks(){
         stock_list.push({tickler:'NTAP',name:'NetApp',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'NFLX',name:'Netflix Inc.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'NWL',name:'Newell Brands',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
-        stock_list.push({tickler:'NFX',name:'Newfield Exploration Co',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
+        // stock_list.push({tickler:'NFX',name:'Newfield Exploration Co',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'NEM',name:'Newmont Mining Corporation',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'NWSA',name:'News Corp. Class A',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'NWS',name:'News Corp. Class B',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
@@ -386,7 +386,7 @@ function getStocks(){
         stock_list.push({tickler:'RL',name:'Polo Ralph Lauren Corp.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'PPG',name:'PPG Industries',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'PPL',name:'PPL Corp.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
-        stock_list.push({tickler:'PX',name:'Praxair Inc.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
+        // stock_list.push({tickler:'PX',name:'Praxair Inc.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'PFG',name:'Principal Financial Group',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'PG',name:'Procter & Gamble',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'PGR',name:'Progressive Corp.',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
@@ -520,74 +520,156 @@ function getStocks(){
         stock_list.push({tickler:'ZION',name:'Zions Bancorp',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
         stock_list.push({tickler:'ZTS',name:'Zoetis',INDU: true,sp500: true,nasdaq: true,adx:0,rsi:0,srsi:0,mom:0,adxx:0,rsix:0,srsi:0,smom:0,comp:0});
 
-
         localStorage.setItem("LSstock_list",JSON.stringify(stock_list));
 }  // end of function getStocks
 
 
-//*******************************************************************/
-//  Calling IEX API for each stock, getting financial information
-//*******************************************************************/
-
-function getFinancialData(){
-
-    //  Will get financial data for all stocks
-    var total_stocks=stock_list.length;
-    var rsplng=0;
-    var base_url="https://sandbox.iexapis.com/stable/stock/";
-    var api_token="Tsk_c7a9b5b07a7d4570afb668eccf02054b";
-
-    for(var i=0;i<2;i++){
-
-    //  Makes 4 API calls to get the data from API server AIX
-        var APIquery=base_url+stock_list[i].tickler+"/indicator/adx?range=6m&token="+api_token;
-console.log(APIquery);
-        $.ajax({async: false,url:APIquery,method:"GET"}).then(function(finrsp){
-              rsplng=finrsp.indicator[0].length;
-              stock_list[i].adx=finrsp.indicator[0][rsplng-1];
-              localStorage.setItem("LSstock_list",JSON.stringify(stock_list));
-              total_call_returns++;
-              console.log("counter ",total_call_returns);
-              console.log(finrsp);
-            });
-        var APIquery=base_url+stock_list[i].tickler+"/indicator/rsi?range=6m&token="+api_token;
-        $.ajax({async: false,url:APIquery,method:"GET"}).then(function(finrsp){
-            rsplng=finrsp.indicator[0].length;
-              stock_list[i].rsi=finrsp.indicator[0][rsplng-1];
-              localStorage.setItem("LSstock_list",JSON.stringify(stock_list));
-              total_call_returns++;
-              console.log("counter ",total_call_returns);
-              console.log(finrsp);
-            });
-        var APIquery=base_url+stock_list[i].tickler+"/indicator/stochrsi?range=6m&token="+api_token;
-        $.ajax({async: false,url:APIquery,method:"GET"}).then(function(finrsp){
-              rsplng=finrsp.indicator[0].length;
-              stock_list[i].srsi=finrsp.indicator[0][rsplng-1];
-              localStorage.setItem("LSstock_list",JSON.stringify(stock_list));
-              total_call_returns++;
-              console.log("counter ",total_call_returns);
-              console.log(finrsp);
-            });
-        var APIquery=base_url+stock_list[i].tickler+"/indicator/mom?range=6m&token="+api_token;
-        $.ajax({async: false,url:APIquery,method:"GET"}).then(function(finrsp){
-              rsplng=finrsp.indicator[0].length;
-              stock_list[i].mom=finrsp.indicator[0][rsplng-1];
-              localStorage.setItem("LSstock_list",JSON.stringify(stock_list));
-              total_call_returns++;
-              console.log("counter ",total_call_returns);
-              console.log(finrsp);
-            });
-    }
+//***************************************************************************************************/
+// This function handles an error response from the ajax call.  Basically, it ignores the issue     /
+// and lets the application deal with it later by evaluating the quality of its data set.           /
+// it keeps making the subsequent call to another ajax call                                         /
+//**************************************************************************************************/
 
 
-}  // end of function getAPIData
+function handles_error(finrsp){
+
+  // Getting data from local storage for use during the ajax call
+  var current_stock=parseInt(localStorage.getItem("current_stock"));
+  var tech_indicator=parseInt(localStorage.getItem("tech_indicator"));
+  var nbr_stocks=parseInt(localStorage.getItem("nbr_stocks"));
+
+  //  Gets data from API and saves it to memory
+  if(tech_indicator===1){stock_list[current_stock].adx=0;}
+  else if (tech_indicator===2){stock_list[current_stock].rsi=0;}
+  else if (tech_indicator===3){stock_list[current_stock].srsi=0;}
+  else if (tech_indicator===4){stock_list[current_stock].mom=0; }
+
+  //  checks whether this response is the last call (tech_indicator=4 and it is the last stock)
+  //  if so, saves the information to local storage
+
+  if(tech_indicator===4&&current_stock===nbr_stocks-1){ 
+    localStorage.setItem("LSstock_list",JSON.stringify(stock_list));   // saving to local storage
+    $("#api-call-progress").text("");  // Cleaning progress bar text
+    return;
+  };
+
+  // if not the end of the list, then keeps processing
+
+if(tech_indicator===1){
+         tech_indicator++;   // increases the tech indicator to keep track of which one is the current one
+         APIquery=base_url+stock_list[current_stock].tickler+"/indicator/rsi?range=6m&token="+api_token;}
+else if (tech_indicator===2){
+        tech_indicator++;   // increases the tech indicator to keep track of which one is the current one
+        APIquery=base_url+stock_list[current_stock].tickler+"/indicator/stochrsi?range=6m&token="+api_token;}
+else if (tech_indicator===3){
+        tech_indicator++;   // increases the tech indicator to keep track of which one is the current one
+        APIquery=base_url+stock_list[current_stock].tickler+"/indicator/mom?range=6m&token="+api_token;}
+else if (tech_indicator===4){
+        tech_indicator=1;   // increases the tech indicator to keep track of which one is the current one
+        current_stock++;    // Changes stock
+        APIquery=base_url+stock_list[current_stock].tickler+"/indicator/adx?range=1m&token="+api_token;}
+
+  // saves the changes to local storage for use for the ajax call back function that will be made next
+  localStorage.setItem("current_stock",current_stock.toString());
+  localStorage.setItem("tech_indicator",tech_indicator.toString());
+          
+  // Now that everything has been set, calls another ajax function
+  $.ajax({url: APIquery,success: process_data, error: handles_error});
+
+  //  Updating the progress bar
+  var pct_comp=Math.round(100*current_stock/nbr_stocks);
+  $("#api-call-progress").attr("style","width: "+pct_comp+"%");
+  $("#api-call-progress").attr("aria-valuenow",pct_comp);
+  $("#api-call-progress").text(stock_list[current_stock].tickler+" | "+pct_comp+"%");
+
+}  // ends function handles_error
+
+
+//**********************************************************************************************/
+// This function handles the response from the ajax call, and makes another asynchronous call   /
+// it calls for this same function to handle the ajax call back, if successful                  /
+//**********************************************************************************************/
+
+function process_data(finrsp){
+
+  // Getting data from local storage for use during the ajax call
+  var current_stock=parseInt(localStorage.getItem("current_stock"));
+  var tech_indicator=parseInt(localStorage.getItem("tech_indicator"));
+  var nbr_stocks=parseInt(localStorage.getItem("nbr_stocks"));
+
+    //  checks there is a response (length of finrsp at least 1).  If no valid response, it returns
+    // console.log(stock_list[current_stock].name)
+
+    if(finrsp.indicator.length>=1){ rsplng=finrsp.indicator[0].length;}
+    else {return}               
+
+    if(tech_indicator===1){stock_list[current_stock].adx=finrsp.indicator[0][rsplng-1];}
+    else if (tech_indicator===2){stock_list[current_stock].rsi=finrsp.indicator[0][rsplng-1];}
+    else if (tech_indicator===3){stock_list[current_stock].srsi=finrsp.indicator[0][rsplng-1];}
+    else if (tech_indicator===4){stock_list[current_stock].mom=finrsp.indicator[0][rsplng-1]; }
+  
+    //  checks whether this response is the last call (tech_indicator=4 and it is the last stock)
+    //  if so, saves the information to local storage
+
+    if(tech_indicator===4&&current_stock>=nbr_stocks-1){ 
+        localStorage.setItem("LSstock_list",JSON.stringify(stock_list));   // saving to local storage
+        $("#api-call-progress").text("");  // Cleaning progress bar text
+        return;
+    };
+
+    // if not the end of the list, then keeps processing
+  
+    if(tech_indicator===1){
+      tech_indicator++;   // increases the tech indicator to keep track of which one is the current one
+      APIquery=base_url+stock_list[current_stock].tickler+"/indicator/rsi?range=6m&token="+api_token;}
+else if (tech_indicator===2){
+     tech_indicator++;   // increases the tech indicator to keep track of which one is the current one
+     APIquery=base_url+stock_list[current_stock].tickler+"/indicator/stochrsi?range=6m&token="+api_token;}
+else if (tech_indicator===3){
+     tech_indicator++;   // increases the tech indicator to keep track of which one is the current one
+     APIquery=base_url+stock_list[current_stock].tickler+"/indicator/mom?range=6m&token="+api_token;}
+else if (tech_indicator===4){
+     tech_indicator=1;   // increases the tech indicator to keep track of which one is the current one
+     current_stock++;    // Changes stock
+     APIquery=base_url+stock_list[current_stock].tickler+"/indicator/adx?range=1m&token="+api_token;}
+
+     // saves the changes to local storage for use for the ajax call back function that will be made next
+     localStorage.setItem("current_stock",current_stock.toString());
+     localStorage.setItem("tech_indicator",tech_indicator.toString());
+
+    // Now that everything has been set, calls another ajax function
+    $.ajax({url: APIquery,success: process_data, error: handles_error});
+
+    //  Updating the progress bar
+    var pct_comp=Math.round(100*current_stock/nbr_stocks);
+    $("#api-call-progress").attr("style","width: "+pct_comp+"%");
+    $("#api-call-progress").attr("aria-valuenow",pct_comp);
+    $("#api-call-progress").text(stock_list[current_stock].tickler+" | "+pct_comp+"%");
+
+
+}  // ends function process data
 
 
 //***************************************************************** */
 // Main program functionality 
 //***************************************************************** */
 
-var total_call_returns=0;
-var stock_list=[];   // global variable, array that contains stock data
-getStocks();         // loading the stocks that will be analyzed
-getFinancialData();  // Getting data from AIX via API calling
+var stock_list=[];             // global variable, array that contains stock data
+var base_url="https://sandbox.iexapis.com/stable/stock/";  // Live data versus sandbox
+var api_token="Tsk_c7a9b5b07a7d4570afb668eccf02054b";      // token
+var APIquery="";
+getStocks();                   // loading the stocks that will be analyzed
+
+var nbr_stocks=stock_list.length;  
+var tech_indicator=1;          // which indicator is being retrieved
+var current_stock=0;           // which stock is being called for
+var rsplng=0;                  // length of the responding variable
+
+localStorage.setItem("current_stock",current_stock.toString());
+localStorage.setItem("tech_indicator",tech_indicator.toString());
+localStorage.setItem("nbr_stocks",nbr_stocks.toString());
+
+
+// makes first ajax call.  callback function keeps making subsequent calls
+APIquery=base_url+stock_list[current_stock].tickler+"/indicator/adx?range=1m&token="+api_token;  // Preparing first query
+$.ajax({url: APIquery,success: process_data, error: handles_error});
