@@ -1,7 +1,16 @@
-.body { 
+/* main body attributes */
+
+body { 
+    background-image: url("../images/little_pluses.png");
     background-color: bisque;
 }
 
+.main-wrapper{
+    background-color: white;
+}
+
+
+/* styling for the MD table */
 .scrollable-table {
     max-height:100px;
 }

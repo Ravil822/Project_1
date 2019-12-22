@@ -29,6 +29,19 @@
  
     <div class="container">  <!-- Container to wrap the entire screen-->
 
+          <!--*************************************-->
+          <!--First row contains the progress bar  -->
+          <!--*************************************-->
+          <div class="row">
+               <div class="col-sm-1"></div>  <!--Formatting purposes-->
+               <div class="col-sm-10">
+                    <div class="progress">
+                         <div id="api-call-progress" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                    </div>
+               </div>  <!--Formatting purposes-->
+               <div class="col-sm-1"></div>  <!--Formatting purposes-->
+          </div>  <!--third row-->
+  
           <!--********************************************************************-->
           <!--First row contains the heading / information about this page        -->
           <!--********************************************************************-->
@@ -49,7 +62,7 @@
                           </button>
                   </div>
                   
-                      <a href="" class="white-text mx-3">Trading console - Available strategies</a>
+                      <a href="" class="white-text mx-3">Available trading tips</a>
                   
                       <div>
                           <button id="runStrategy" type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
