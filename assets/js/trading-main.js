@@ -30,7 +30,6 @@ function strategy_clicked(){
 
       // saves name of selected strategy to local storage
       localStorage.setItem("selectedStrategy",slected[0].cells[1].textContent);
-
     }
 
 
@@ -141,7 +140,6 @@ function check_selection(){
     }
 }
 
-
 //*******************************************************************************/
 // Main functionality.  The following code will be run automatically 
 //*******************************************************************************/
@@ -170,6 +168,6 @@ if(all_strategies!==null){
 // Assigning click events to all buttons
 $("#addStrategy").attr("onclick","window.location.href='trading-main-add.html'");
 $("#editStrategy").attr("onclick","window.location.href='trading-main-edit.html'");
+$("#runStrategy").attr("onClick","window.location.href='getstocks.html'")
 $("#deleteStrategy").on("click",deleteStrategy);
-$("#runStrategy").on("click",runStrategy);
 $(document).on("click",".select-checkbox",strategy_clicked);
