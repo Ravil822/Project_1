@@ -4,17 +4,23 @@
 
 function editStrategy(){
     // finding the strategy that was checked
+    
     var slected = $('#TradingStrategiesList').find('.selected');
+    var edit ={
+        name: slected[0].cells[1].textContent,
+        description: slected[0].cells[2].textContent
+    } 
+
     if(slected.length!==0){  // Which strategy was originally selected
 
-        $.alert({
-            title: 'Alert!',
-            content: 'nothing here for now.  Will run the functionality for editing a strategy!',
-        });
+        console.log(edit)
+        
+        localStorage.setItem("edit-strategy",JSON.stringify(edit));
+ 
+       window.location = "trading-main-edit.html";
 
     }
     else {  // No strategy selected, returns
-
         // Sending message
             $.confirm({
                 icon: 'fa fa-warning',
@@ -140,13 +146,16 @@ if(all_strategies!==null){
 
 // Assigning click events to all buttons
 $("#addStrategy").attr("onclick","window.location.href='trading-main-add.html'");
-$("#editStrategy").attr("onclick","window.location.href='trading-main-edit.html'");
+// $("#editStrategy").attr("onclick","window.location.href='trading-main-edit.html'");
+$("#editStrategy").on("click",editStrategy);
 $("#deleteStrategy").on("click",deleteStrategy);
 $("#runStrategy").on("click",runStrategy);
 
 
 // When strategy is selected, then enable buttons
 $(document).on("click",".select-checkbox",function(){
+  //  localStorage.setItem("strategies",JSON.stringify(edit_strategie));
+
 
     $("#runStrategy").attr("disabled",false);
     $("#run-str-fnt").attr("class","fas fa-2x fa-fighter-jet mt-0")
@@ -158,3 +167,4 @@ $(document).on("click",".select-checkbox",function(){
     $("#dlt-str-fnt").attr("class","far fa-2x fa-trash-alt mt-0")
 
 })
+
