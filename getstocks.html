@@ -10,7 +10,6 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Bootstrap core CSS -->
-
   <link rel="stylesheet" href="MDtables/css/bootstrap.min.css">
   <!-- Material Design Bootstrap -->
   <link rel="stylesheet" href="MDtables/css/mdb.min.css">
@@ -21,18 +20,20 @@
   <link href="MDtables/css/addons/datatables-select.min.css" rel="stylesheet">
   <!--Moment JS-->
   <script src="assets/js/moment.js"></script>
+  <!--own styling sheet-->
+  <link rel="stylesheet" href="assets/css/style-getstocks.css">
 </head>
 <body>
 
   <!-- Start your project here-->  
  
  
-    <div class="container">  <!-- Container to wrap the entire screen-->
+    <!-- <div class="container bg-dark">  Container to wrap the entire screen -->
 
           <!--*************************************-->
           <!--First row contains the progress bar  -->
           <!--*************************************-->
-          <div class="row">
+          <div class="row" id="progress-bar-cont">
                <div class="col-sm-1"></div>  <!--Formatting purposes-->
                <div class="col-sm-10">
                     <div class="progress">
@@ -51,24 +52,19 @@
               <div class="col-sm-10 my-1">
                   <div class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-0 mb-3 d-flex justify-content-between align-items-center">
                       <div>
-                          <button id="addStrategy" type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
-                                <i class="fas fa-plus-square mt-0"></i>
+                          <button id="back" type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+                                <i class="fas fa-2x fa-arrow-circle-left"></i>
                           </button>
-                          <button id="editStrategy" type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
-                                <i class="fas fa-pencil-alt mt-0"></i>
-                          </button>
-                          <button id="deleteStrategy" type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
-                            <i class="far fa-trash-alt mt-0"></i>
-                          </button>
-                  </div>
+
+                          <button id="zoom-in-stock" type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" disabled>
+                                <i id="zoom-in-stock-fnt" class="fas fa-search"></i>
+                           </button>
+                    </div>
+
+                    <a href="" class="white-text mx-3">Available trading tips</a>
+
+                    <div></div>  <!--for formatting purposes-->
                   
-                      <a href="" class="white-text mx-3">Available trading tips</a>
-                  
-                      <div>
-                          <button id="runStrategy" type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
-                            <i class="fas fa-fighter-jet"></i>
-                          </button>
-                      </div>
                   </div>
                </div>
               <div class="col-sm-1"></div>  <!--formating purposes-->
@@ -88,10 +84,12 @@
                               <tr>
                                   <th></th>
                                   <th class="th-sm">Name</th>
-                                  <th class="th-sm">Description</th>
-                                  <th class="th-sm">Created</th>
-                                  <th class="th-sm">Edited</th>
-                                  <th class="th-sm">Used</th>
+                                  <th class="th-sm">Sector</th>
+                                  <th class="th-sm">ADX</th>
+                                  <th class="th-sm">RSI</th>
+                                  <th class="th-sm">SRSI</th>
+                                  <th class="th-sm">MOM</th>
+                                  <th class="th-sm">Composite</th>
                               </tr>
                           </thead>
                           <tbody id="trading-list"></tbody>  <!-- Empty container to place the records for trading strategies-->
@@ -101,7 +99,7 @@
                <div class="col-sm-1"></div> <!--formating purposes-->
           </div>  <!--Second row-->
 
-    </div>   <!-- screen wrapper-->
+    <!-- </div>   screen wrapper -->
  
  
   <!-- End your project here-->

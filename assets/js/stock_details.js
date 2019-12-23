@@ -1,0 +1,1 @@
+$("#sback").attr("onClick","window.location.href='getstocks.html'");
