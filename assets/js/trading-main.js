@@ -1,36 +1,35 @@
-//***********************************************************************************************/
-//  When user selects a row, following function enables/disables buttons, and then it writes     /
-//  selected row to local storage for other users to know which strategy was selected            /
-//***********************************************************************************************/
+//***************************************************************************************/
+//  The following function calls the code so that the selected strategy can be edited
+//***************************************************************************************/
 
-function strategy_clicked(){
-    var slected = $('#TradingStrategiesList').find('.selected');  // Which row was selected?
-    if(slected.length===0){  // This means, the user de-selected an option, disabling buttons
+function editStrategy(){
+    // finding the strategy that was checked
+    
+    var slected = $('#TradingStrategiesList').find('.selected');
+    var edit ={
+        name: slected[0].cells[1].textContent,
+        description: slected[0].cells[2].textContent
+    } 
 
-        $("#runStrategy").attr("disabled",true);
-        $("#run-str-fnt").attr("class","fas fa-fighter-jet mt-0")
-  
-        $("#editStrategy").attr("disabled",true);
-        $("#edt-str-fnt").attr("class","fas fa-pencil-alt mt-0")
-  
-        $("#deleteStrategy").attr("disabled",true);
-        $("#dlt-str-fnt").attr("class","far fa-trash-alt mt-0")
-        return;   // Goes back to main
-    };  
+    if(slected.length!==0){  // Which strategy was originally selected
 
-      // enables buttons, makes them bigger
-      $("#runStrategy").attr("disabled",false);
-      $("#run-str-fnt").attr("class","fas fa-2x fa-fighter-jet mt-0")
+        console.log(edit)
+        
+        localStorage.setItem("edit-strategy",JSON.stringify(edit));
+ 
+       window.location = "trading-main-edit.html";
 
-      $("#editStrategy").attr("disabled",false);
-      $("#edt-str-fnt").attr("class","fas fa-2x fa-pencil-alt mt-0")
-
-      $("#deleteStrategy").attr("disabled",false);
-      $("#dlt-str-fnt").attr("class","far fa-2x fa-trash-alt mt-0")
-
-      // saves name of selected strategy to local storage
-      localStorage.setItem("selectedStrategy",slected[0].cells[1].textContent);
     }
+    else {  // No strategy selected, returns
+        // Sending message
+            $.confirm({
+                icon: 'fa fa-warning',
+                title: 'Data needed',
+                content: 'Please select a strategy so that I know which one you would like to edit.',
+                type: 'red',
+                typeAnimated: true,
+                buttons: { tryAgain: {text: 'Start over',btnClass: 'btn-red', action: function(){} }        }
+                });  // jquery confirm
 
 
 //***************************************************************************************/
@@ -167,7 +166,25 @@ if(all_strategies!==null){
 
 // Assigning click events to all buttons
 $("#addStrategy").attr("onclick","window.location.href='trading-main-add.html'");
-$("#editStrategy").attr("onclick","window.location.href='trading-main-edit.html'");
-$("#runStrategy").attr("onClick","window.location.href='getstocks.html'")
+// $("#editStrategy").attr("onclick","window.location.href='trading-main-edit.html'");
+$("#editStrategy").on("click",editStrategy);
 $("#deleteStrategy").on("click",deleteStrategy);
-$(document).on("click",".select-checkbox",strategy_clicked);
+$("#runStrategy").on("click",runStrategy);
+
+
+// When strategy is selected, then enable buttons
+$(document).on("click",".select-checkbox",function(){
+  //  localStorage.setItem("strategies",JSON.stringify(edit_strategie));
+
+
+    $("#runStrategy").attr("disabled",false);
+    $("#run-str-fnt").attr("class","fas fa-2x fa-fighter-jet mt-0")
+
+    $("#editStrategy").attr("disabled",false);
+    $("#edt-str-fnt").attr("class","fas fa-2x fa-pencil-alt mt-0")
+
+    $("#deleteStrategy").attr("disabled",false);
+    $("#dlt-str-fnt").attr("class","far fa-2x fa-trash-alt mt-0")
+
+})
+
