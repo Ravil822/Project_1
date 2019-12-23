@@ -1,0 +1,144 @@
+
+<!--***********************************************-->
+<!-- This program generates a weather application  -->
+<!--***********************************************-->
+
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+     <title>Marco Carrillo© Weather Application</title>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- MDB icon -->
+  <!-- <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon"> -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+
+  <link rel="stylesheet" href="MDtables/css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="MDtables/css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="MDtables/css/style.css">
+  <!-- MDBootstrap Datatables  -->
+  <link href="MDtables/css/addons/datatables.min.css" rel="stylesheet">
+  <link href="MDtables/css/addons/datatables-select.min.css" rel="stylesheet">
+  <!--Moment JS-->
+  <script src="assets/js/moment.js"></script>
+   <!-- jQuery -->
+  <script type="text/javascript" src="MDtables/js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="MDtables/js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="MDtables/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="MDtables/js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript"></script>
+  <!-- MDBootstrap Datatables  -->
+  <script type="text/javascript" src="MDtables/js/addons/datatables.min.js"></script>
+  <script type="text/javascript" src="MDtables/js/addons/datatables-select.min.js"></script>  
+  <!-- JQuery confirm -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+  <!--JQuery UI-->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+
+<body>
+    <!--*************************************************************-->
+    <!--  Main functionality, tabs-->
+    <!--*************************************************************-->
+
+    <div class="container container-wrapper">  <!-- Main wrapper -->
+
+
+          <!--********************************************************************-->
+          <!--First row contains the heading / information about this page        -->
+          <!--********************************************************************-->
+
+          <div class="row my-3 mb-0">
+               <div class="col-sm-1"></div>  <!--formatting purposes only-->
+               <div class="col-sm-10">
+                 <div class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-0 mb-3 d-flex justify-content-between align-items-center">
+                     <div>
+                       <button id="back" type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+                         <i class="fas fa-2x fa-arrow-circle-left"></i>
+                       </button>
+                     </div>
+               
+                       <a href="" class="white-text mx-3">Stock details</a>
+                       
+                       <div>   <!--don't delete, needed for formatting-->
+                       </div>  <!--don't delete, needed for formatting-->
+ 
+                   </div>
+                </div>
+                 <div class="col-sm-1"></div>  <!--formatting purposes only-->
+            </div>  <!-- First row ends here-->
+ 
+          <!--*******************************************************************************************************-->
+          <!-- Second row, it contains the search plus all other functionality                                       -->
+          <!-- this row will be split into two columns:  The search/history, and the actual data                      -->
+          <!-- The first column will be split into two rows, one for the search dialog, and the other for the history -->
+          <!-- The second column will not be split, and will contain the tabs for displaying results                  -->
+          <!--*******************************************************************************************************-->
+
+          <div class="row mt-3">
+
+               <div class="col-sm-1"></div>  <!--for spacing purposes only-->
+
+               <div class="col-sm-10" id="tabs">
+                    <!-- <div id="tabs"> -->
+                         <ul>
+                              <li><a href="#fragment-1"><span>Stock Information</span></a></li>
+                              <li><a href="#fragment-2"><span>Graph</span></a></li>
+                              <li><a href="#fragment-3"><span>News</span></a></li>
+                              <li><a href="#fragment-4"><span>TBD</span></a></li>
+                         </ul>
+
+                         <div id="fragment-1">
+
+                              <!--Following containers for the 5-day forecasting-->
+
+                              <div class="row align-items-center">  <!--Container for the 5-day forecast-->
+
+
+                              </div>  <!-- 5 day forecast ends here-->
+                              <!--containers for 5-day forecasting ends here-->
+
+                         </div>  <!--end of fragment 1-->
+
+                         <div id="fragment-2">
+                              <div class="row">  <!-- top row latitude and longitude-->
+                                   <h6 id="user-geo"></h6>
+                               </div>
+
+                               <div class="row" id="map">
+                                    <!-- <img src="" alt="Geo-location map" id="map"> -->
+                               </div>
+                         </div> <!-- end of fragment-2-->
+                         <div id="fragment-3">
+
+                         </div>  <!--end of fragment 3-->
+
+                         <div id="fragment-4">
+
+                         </div>  <!-- end of fragment 4-->
+
+                    </div>  <!-- End of row 2, Column 2-->
+
+               </div>  <!-- End of row 2-->
+     </div>  <!-- main wrapper-->
+
+     <script>$( "#tabs" ).tabs()</script>
+     <!-- <script src="assets/js/get_correct_icon.js"></script> -->
+     <script src="assets/js/details.js"></script>
+
+</body>
+</html>

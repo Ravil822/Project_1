@@ -56,8 +56,9 @@ footer.page-footer {
   margin: 0;
 }
 
+/* Formating the background image homepage */
+
 .image-bg { 
-                     /*  formating map for geolocation  */
     width:100%;
     height: auto;
 }

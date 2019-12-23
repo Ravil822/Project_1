@@ -31,42 +31,63 @@ function editStrategy(){
                 buttons: { tryAgain: {text: 'Start over',btnClass: 'btn-red', action: function(){} }        }
                 });  // jquery confirm
 
-            // exits the routine without doing anything
-            return;
-    } // else
-}  // End of function editStrategy
 
 //***************************************************************************************/
 //  The following function calls the code so that the selected strategy can be deleted
 //***************************************************************************************/
 
 function deleteStrategy(){
-    // finding the strategy that was checked
-    var slected = $('#TradingStrategiesList').find('.selected');
-    if(slected.length!==0){  // Which strategy was originally selected
-
-        $.alert({
-            title: 'Alert!',
-            content: 'nothing here for now.  Will run the functionality to delete a strategy!',
-        });
+    var slected = $('#TradingStrategiesList').find('.selected');  // Which row was selected?
+    var strategy_to_delete=slected[0].cells[1].textContent;  // Selects strategy name
 
 
-    }
-    else {  // No strategy selected, returns
+    
+    $.confirm({
+        title: 'Delete strategy '+strategy_to_delete+'?',
+        content: 'Once you delete strategy '+strategy_to_delete+', it cannot be recovered.  Are you sure you want to continue?',
+        type: 'red',   
+        buttons: {
 
-        // Sending message
-            $.confirm({
-                icon: 'fa fa-warning',
-                title: 'Data needed',
-                content: 'Please select a strategy so that I know which strategy you want to delete.',
-                type: 'red',
-                typeAnimated: true,
-                buttons: { tryAgain: {text: 'Start over',btnClass: 'btn-red', action: function(){} }        }
-                });  // jquery confirm
+            delete: {text: 'Delete strategy', btnClass: 'btn-red',
+                action: function(){
 
-            // exits the routine without doing anything
-            return;
-    } // else
+                    // Deleting the strategy
+                    var new_strategies=[];
+                    var old_strategies=JSON.parse(localStorage.getItem("strategies"));  // gets all strategies
+                    for(var i=0;i<old_strategies.length;i++){
+                        if(old_strategies[i].name!==strategy_to_delete){new_strategies.push(old_strategies[i])}
+                    }
+                    all_strategies=new_strategies;   // updating the global variable that has all of the strategies
+                    localStorage.setItem("strategies",JSON.stringify(all_strategies));   // Updating local storage
+
+                    // eliminating the strategy from the current table
+                    $("#"+strategy_to_delete).remove();
+
+                    // because the selected strategy has been deleted, there is no selected strategy
+                    // therefore, disables buttons
+
+                    $("#runStrategy").attr("disabled",true);
+                    $("#run-str-fnt").attr("class","fas fa-fighter-jet mt-0")
+                    $("#editStrategy").attr("disabled",true);
+                    $("#edt-str-fnt").attr("class","fas fa-pencil-alt mt-0")
+                    $("#deleteStrategy").attr("disabled",true);
+                    $("#dlt-str-fnt").attr("class","far fa-trash-alt mt-0")
+            
+                }
+            },
+
+            goback: {
+                text: 'Keep it',
+                btnClass: 'btn-blue',
+                action: function(){
+                }
+            }
+        }
+    });
+
+
+
+
 }
 
 function runStrategy(){
@@ -118,7 +139,6 @@ function check_selection(){
     }
 }
 
-
 //*******************************************************************************/
 // Main functionality.  The following code will be run automatically 
 //*******************************************************************************/
@@ -127,8 +147,8 @@ var all_strategies=JSON.parse(localStorage.getItem("strategies"));
 
 if(all_strategies!==null){
         for(var i=0;i<all_strategies.length;i++){
-            var newstrat=$("<tr>");                                      // header
-            var newchkbox=$("<td>");                                     // empty, please leave it for the checkbox
+            var newstrat=$("<tr>").attr("id",all_strategies[i].name);       // header.  ID=Strat name for identification later on
+            var newchkbox=$("<td>");                                        // empty, please leave it for the checkbox
             var newname=$("<td>").text(all_strategies[i].name);             // strategy name
             var newdesc=$("<td>").text(all_strategies[i].desc);             // strategy description
             var created=$("<td>").text(all_strategies[i].date_created);     // Date created
