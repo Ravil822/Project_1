@@ -32,9 +32,7 @@ function editStrategy() {
     //     });  // jquery confirm
 }
 
-//***************************************************************************************/
-//  The following function calls the code so that the selected strategy can be deleted
-//***************************************************************************************/
+        console.log(edit)
 
 function deleteStrategy() {
     var slected = $('#TradingStrategiesList').find('.selected');  // Which row was selected?
@@ -86,9 +84,6 @@ function deleteStrategy() {
         }
     });
 
-
-
-
 }
 
 function runStrategy() {
@@ -118,8 +113,6 @@ function runStrategy() {
         return;
 
     } // else
-
-    // Loading the new 
 
 }  // end of function runStrategy()
 
