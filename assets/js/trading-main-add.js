@@ -1,3 +1,8 @@
+//****************************************************************************/
+//   Function adds the strategy into local storage.  data of all
+//   strategies is stored in an array of objects, and then stored.
+//****************************************************************************/
+
 function addstrat(){
 
     //  Checks that there is a total of 100% allocated to the entire strategy
@@ -67,9 +72,6 @@ function addstrat(){
                 }
              }
             });  // jquery confirm
-
-
-
 
     } else{
 
