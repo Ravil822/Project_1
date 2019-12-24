@@ -142,5 +142,3 @@ $("#add-stg").on("click",addstrat);
 
 // focuses on the first field
 $("#strat-name").focus();
-
-// Storing data in session storage
