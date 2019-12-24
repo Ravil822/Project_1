@@ -31,7 +31,6 @@ function editStrategy(){
                 buttons: { tryAgain: {text: 'Start over',btnClass: 'btn-red', action: function(){} }        }
                 });  // jquery confirm
 
-
 //***************************************************************************************/
 //  The following function calls the code so that the selected strategy can be deleted
 //***************************************************************************************/
@@ -39,8 +38,6 @@ function editStrategy(){
 function deleteStrategy(){
     var slected = $('#TradingStrategiesList').find('.selected');  // Which row was selected?
     var strategy_to_delete=slected[0].cells[1].textContent;  // Selects strategy name
-
-
     
     $.confirm({
         title: 'Delete strategy '+strategy_to_delete+'?',
@@ -85,9 +82,6 @@ function deleteStrategy(){
         }
     });
 
-
-
-
 }
 
 function runStrategy(){
@@ -117,8 +111,6 @@ function runStrategy(){
             return;
 
     } // else
-
-    // Loading the new 
 
 }  // end of function runStrategy()
 
