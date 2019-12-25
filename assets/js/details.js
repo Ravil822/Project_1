@@ -1,26 +1,30 @@
+
 //*****************************************************/
 //  Generate the charts with actual data
 //*************************************************** */
 
-function generateChartData() {
-    var firstDate = new Date(2012, 0, 1);
-    firstDate.setDate(firstDate.getDate() - 1000);
-    firstDate.setHours(0, 0, 0, 0);
+function generateChartData(stock_data) {
 
-    for (var i = 0; i < 1000; i++) {
-        var newDate = new Date(firstDate);
-        newDate.setHours(0, i, 0, 0);
+    var lastTradingDate = new Date(stock_data[0].date);
+    lastTradingDate.setHours(0, 0, 0, 0);
 
-        var a = Math.round(Math.random() * (40 + i)) + 100 + i;
-        var b = Math.round(Math.random() * 100000000);
 
+    for (var i = 0; i < stock_data.length; i++) {   // data comes from AIX on a one-minute interval
+ 
+        var newTime=new Date(lastTradingDate);   // Creating the new date using last trading date
+        var HrMin=stock_data[i].minute.split(":");
+        newTime.setHours(parseInt(HrMin[0]),parseInt(HrMin[1]),0,0);
+  
         chartData.push({
-            date: newDate,
-            value: a,
-            volume: b
+            date: newTime,                        // date
+            value: stock_data[i].average,         // average price during minute
+            volume: stock_data[i].volume          // volume during minute
         });
     }
-}
+
+
+}  // last line of generateChartData function
+
 
 //********************************************************************************** */
 //  Creates the skeleton for the chart.  Once data is ready, it will be populated
@@ -145,18 +149,57 @@ function createStockChart() {
     chart.write('chartdiv');
 }
 
+//************************************************************************ */
+//  The following function responds to the ajax call and orchestrates
+//  the creation of an intrad-day chart for the stock selected
+//************************************************************************ */
+
+function showtime(idata) {
+
+    generateChartData(idata);
+    createStockChart();
+
+}  // end of function showtime
+
+
+//*************************************************************** */
+//  Following function handles API error
+//*************************************************************** */
+
+function handles_APIerror(){
+    $.confirm({
+        title: 'Error',
+        content: 'There was an error getting intraday data.  Please try again, or call us back at 1-900-TRD-BOTS',
+        type: 'red',   
+        buttons: {
+                     delete: {text: 'Delete strategy', btnClass: 'btn-red',
+                     action: function(){}  }
+                  }
+    });
+
+}
 
 //********************* */
 // main functionality
 //********************* */
 
 $("#back").attr("onClick","window.location.href='getstocks.html'");
-
-// Initializes chart - Required by Amcharts
-AmCharts.ready(function () {
-    generateChartData();
-    createStockChart();
-});
-
 var chartData = [];
 var chart;
+
+// making the AJAX call
+
+var stock_list=[];             // global variable, array that contains stock data
+var base_url="https://sandbox.iexapis.com/stable/stock/";  // Live data versus sandbox
+var api_token="Tsk_c7a9b5b07a7d4570afb668eccf02054b";      // token
+var current_stock=localStorage.getItem("")
+
+// getting the selected stock from local storage, finding it and requesting API information
+var stock_selected=localStorage.getItem("selectedStock");
+var stock_list=JSON.parse(localStorage.getItem("LSstock_list"));
+var sindex=stock_list.map(function(e) {return e.name}).indexOf(stock_selected);
+var sTickler=stock_list[sindex].tickler;
+
+// Getting intra-day data from IEX API
+var APIquery=base_url+sTickler+"/intraday-prices/adx?range=1m&token="+api_token;
+$.ajax({url: APIquery,success: showtime, error: handles_APIerror});
