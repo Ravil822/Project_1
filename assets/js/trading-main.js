@@ -4,41 +4,19 @@
 
 function editStrategy() {
     // finding the strategy that was checked
+    var index = $("#TradingStrategiesList").find(".selected").data(all_strategies).data(index)
+    localStorage.setItem("edit-strategy", JSON.stringify(index));
 
-    var slected = $('#TradingStrategiesList').find('.selected');
-    var edit = {
-        name: slected[0].cells[1].textContent,
-        description: slected[0].cells[2].textContent
-    }
+    window.location = "trading-main-edit.html";
 
-    if (slected.length !== 0) {  // Which strategy was originally selected
-
-        console.log(edit)
-
-        localStorage.setItem("edit-strategy", JSON.stringify(edit));
-
-        window.location = "trading-main-edit.html";
-
-    }
-    // else {  // No strategy selected, returns
-    //     // Sending message
-    //     $.confirm({
-    //         icon: 'fa fa-warning',
-    //         title: 'Data needed',
-    //         content: 'Please select a strategy so that I know which one you would like to edit.',
-    //         type: 'red',
-    //         typeAnimated: true,
-    //         buttons: { tryAgain: { text: 'Start over', btnClass: 'btn-red', action: function () { } } }
-    //     });  // jquery confirm
-}
-
-        console.log(edit)
+};
+//***************************************************************************************/
+//  The following function calls the code so that the selected strategy can be deleted
+//***************************************************************************************/
 
 function deleteStrategy() {
     var slected = $('#TradingStrategiesList').find('.selected');  // Which row was selected?
     var strategy_to_delete = slected[0].cells[1].textContent;  // Selects strategy name
-
-
 
     $.confirm({
         title: 'Delete strategy ' + strategy_to_delete + '?',
@@ -141,7 +119,7 @@ var all_strategies = JSON.parse(localStorage.getItem("strategies"));
 
 if (all_strategies !== null) {
     for (var i = 0; i < all_strategies.length; i++) {
-        var newstrat = $("<tr>").attr("id", all_strategies[i].name);       // header.  ID=Strat name for identification later on
+        var newstrat = $("<tr>").attr("id", all_strategies[i].name).attr("data-index", i);       // header.  ID=Strat name for identification later on
         var newchkbox = $("<td>");                                        // empty, please leave it for the checkbox
         var newname = $("<td>").text(all_strategies[i].name);             // strategy name
         var newdesc = $("<td>").text(all_strategies[i].desc);             // strategy description
