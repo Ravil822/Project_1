@@ -33,6 +33,20 @@ function strategy_clicked(){
       localStorage.setItem("selectedStrategy",slected[0].cells[1].textContent);
     }
 
+
+    //***************************************************************************************/
+//  The following function calls the code so that the selected strategy can be edited
+//***************************************************************************************/
+
+function editStrategy() {
+    // finding the strategy that was checked
+    var index = $("#TradingStrategiesList").find(".selected").data(all_strategies).data(index)
+    localStorage.setItem("edit-strategy", JSON.stringify(index));
+
+    window.location = "trading-main-edit.html";
+
+};
+
 //***************************************************************************************/
 //  The following function calls the code so that the selected strategy can be deleted
 //***************************************************************************************/
@@ -142,7 +156,7 @@ var all_strategies=JSON.parse(localStorage.getItem("strategies"));
 
 if(all_strategies!==null){
         for(var i=0;i<all_strategies.length;i++){
-            var newstrat=$("<tr>").attr("id",all_strategies[i].name);       // header.  ID=Strat name for identification later on
+            var newstrat = $("<tr>").attr("id", all_strategies[i].name).attr("data-index", i);       // header.  ID=Strat name for identification later on
             var newchkbox=$("<td>");                                        // empty, please leave it for the checkbox
             var newname=$("<td>").text(all_strategies[i].name);             // strategy name
             var newdesc=$("<td>").text(all_strategies[i].desc);             // strategy description
@@ -161,7 +175,7 @@ if(all_strategies!==null){
 
 // Assigning click events to all buttons
 $("#addStrategy").attr("onclick","window.location.href='trading-main-add.html'");
-$("#editStrategy").attr("onclick","window.location.href='trading-main-edit.html'");
+$("#editStrategy").on("click", editStrategy);
 $("#runStrategy").attr("onClick","window.location.href='getstocks.html'")
 $("#deleteStrategy").on("click",deleteStrategy);
 $(document).on("click",".select-checkbox",strategy_clicked);
