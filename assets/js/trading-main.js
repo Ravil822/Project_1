@@ -1,3 +1,4 @@
+
 //***********************************************************************************************/
 //  When user selects a row, following function enables/disables buttons, and then it writes     /
 //  selected row to local storage for other users to know which strategy was selected            /
@@ -84,6 +85,7 @@ function deleteStrategy(){
     });
 
 }
+
 
 function runStrategy(){
     // finding the strategy that was checked

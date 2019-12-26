@@ -1,3 +1,4 @@
+
 //***********************************************************************************************/
 //  When user selects a row, following function enables/disables buttons, and then it writes     /
 //  selected row to local storage to understand which stock was selected                         /
@@ -19,7 +20,7 @@ function stock_clicked(){
     // saves name of selected strategy to local storage
     localStorage.setItem("selectedStock",slected[0].cells[1].textContent);
   }
-
+ 
 
 //**********************************************************************************/
 //  The following function ranks the stocks and presents the results to the user   /

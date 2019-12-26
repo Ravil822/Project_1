@@ -1,3 +1,4 @@
+
 //****************************************************************************/
 //   Function adds the strategy into local storage.  data of all
 //   strategies is stored in an array of objects, and then stored.
