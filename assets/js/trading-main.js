@@ -1,6 +1,4 @@
-//***************************************************************************************/
-//  The following function calls the code so that the selected strategy can be edited
-//***************************************************************************************/
+
 
 function editStrategy() {
     // finding the strategy that was checked
@@ -64,7 +62,7 @@ function deleteStrategy() {
 
 }
 
-function runStrategy() {
+
     // finding the strategy that was checked
     var slected = $('#TradingStrategiesList').find('.selected');
     if (slected.length !== 0) {  // Which strategy was originally selected

@@ -1,6 +1,5 @@
-function addstrat() {
 
-    //  Checks that there is a total of 100% allocated to the entire strategy
+   //  Checks that there is a total of 100% allocated to the entire strategy
     var total_pctg = 0;
     var total_adx = 0;
     var total_rsi = 0;
