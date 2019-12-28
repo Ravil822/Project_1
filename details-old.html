@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="MDtables/css/style.css">
   <!-- MDBootstrap Datatables  -->
   <link href="MDtables/css/addons/datatables.min.css" rel="stylesheet">
-  <!-- <link href="MDtables/css/addons/datatables-select.min.css" rel="stylesheet"> -->
+  <link href="MDtables/css/addons/datatables-select.min.css" rel="stylesheet">
   <!--Moment JS-->
   <script src="assets/js/moment.js"></script>
    <!-- jQuery -->
@@ -35,10 +35,11 @@
   <script type="text/javascript"></script>
   <!-- MDBootstrap Datatables  -->
   <script type="text/javascript" src="MDtables/js/addons/datatables.min.js"></script>
-  <!-- <script type="text/javascript" src="MDtables/js/addons/datatables-select.min.js"></script>   -->
+  <script type="text/javascript" src="MDtables/js/addons/datatables-select.min.js"></script>  
   <!--JQuery UI-->
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-  <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+  <!-- <link rel="stylesheet" href="htpps:/resources/demos/style.css"> -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <!--Amcharts-->
   <link rel="stylesheet" href="amcharts/amcharts/style.css" type="text/css">
@@ -51,8 +52,8 @@
   <!--Google fonts-->
   <link href='https://fonts.googleapis.com/css?family=Racing Sans One' rel='stylesheet'>
   <link href="assets/css/details.css" rel='stylesheet'>
-
 </head>
+
 
 <body>
     <!--*************************************************************-->
@@ -60,6 +61,7 @@
     <!--*************************************************************-->
 
     <div class="container container-wrapper">  <!-- Main wrapper -->
+
 
           <!--********************************************************************-->
           <!--First row contains the heading / information about this page        -->
@@ -105,7 +107,7 @@
                          <ul>
                               <li><a href="#fragment-1"><span>Six-month stock price</span></a></li>
                               <li><a href="#fragment-2"><span>Intra-day stock price</span></a></li>
-                              <li><a href="#fragment-3"><span>Last 50 News</span></a></li>
+                              <li><a href="#fragment-3"><span>Last 2-days news</span></a></li>
                               <li><a href="#fragment-4"><span>Trade shares</span></a></li>
                          </ul>
 
@@ -129,20 +131,54 @@
                          <!--Tab 3:  Will contain latest news -->
                          <!--*********************************-->
                          <div id="fragment-3">
-                              <div class="table-responsive text-nowrap">
-                              <table id="news-list" class="table table-striped table-bordered" cellspacing="0" width="100%"style="width:100%"> 
-                                   <thead>
-                                       <tr>
-                                           <th class="th-sm">Date</th>
-                                           <th class="th-sm">Sentiment</th>
-                                           <th class="th-sm">Title</th>
-                                           <th class="th-sm">Source</th>
-                                           <th class="th-sm">Website</th>
-                                       </tr>
-                                   </thead>
-                                   <tbody id="article-list"></tbody>
-                              </table>
-                              </div>
+                              <div id="accordion">
+                                   <h3>Section 1</h3>
+                                   <div>
+                                     <p>
+                                     Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                                     ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                                     amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                                     odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                                     </p>
+                                   </div>
+                                   <h3>Section 2</h3>
+                                   <div>
+                                     <p>
+                                     Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                                     purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                                     velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                                     suscipit faucibus urna.
+                                     </p>
+                                   </div>
+                                   <h3>Section 3</h3>
+                                   <div>
+                                     <p>
+                                     Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                                     Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                                     ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                                     lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+                                     </p>
+                                     <ul>
+                                       <li>List item one</li>
+                                       <li>List item two</li>
+                                       <li>List item three</li>
+                                     </ul>
+                                   </div>
+                                   <h3>Section 4</h3>
+                                   <div>
+                                     <p>
+                                     Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                                     et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                                     faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                                     mauris vel est.
+                                     </p>
+                                     <p>
+                                     Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                                     Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                                     inceptos himenaeos.
+                                     </p>
+                                   </div>
+                                 </div>
                          </div>  <!--end of fragment 3-->
 
                          <div id="fragment-4">
@@ -208,8 +244,9 @@
      </div>  <!-- main wrapper-->
 
 <script>$( "#tabs" ).tabs()</script>
+<script>$( function() {$( "#accordion" ).accordion();});</script>
 <script src="assets/js/details.js"></script>
-
+    
      
 </body>
 </html>
