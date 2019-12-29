@@ -455,3 +455,4 @@ var News_stock_ticker="?tickers="+sTickler+"&items=50"
 var News_api_token="&token=zgnr45fiudxhs9tdc9thlumkkwril7vqlmoqnbtp"
 var News_API_query=News_base_url+News_stock_ticker+News_api_token;
 $.ajax({url: News_API_query,success: showNews, error: handles_APIerror});
+$("#tabs").on( "tabsactivate", function( event, ui ) {$($.fn.dataTable.tables(true)).DataTable().columns.adjust();} );
