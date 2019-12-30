@@ -129,6 +129,7 @@ function process_results(){
             columnDefs: [{orderable: false, className: 'select-checkbox',targets: 0 }],
                 select: { style: 'os', selector: 'td:first-child'}
             });
+            $($.fn.dataTable.tables(true)).DataTable().columns.adjust();
             $(document).on("click",".select-checkbox",stock_clicked);                         // selects stock
 
 }  // end of function process results
@@ -148,9 +149,6 @@ function getStocks(){
         if(temp_stock_list!==null){
             stock_list=temp_stock_list;   // global variable updated
             return;}
-
-
-
 
         // if list does not exists, it creates one.  Starts adding the S&P500
 

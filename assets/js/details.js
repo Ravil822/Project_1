@@ -267,7 +267,22 @@ function showIDchart(idata) {
 
     if (idata.length>0){
         generateIDChartData(idata);
-        createIDStockChart(); }
+        createIDStockChart();
+
+        // once it gets data back, then it creates the label for the buttons
+        $("#trdl100").text("Long 100 sh @"+(latest_stock_price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')+" for $"+(100*latest_stock_price).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'));
+        $("#trdl200").text("Long 200 sh @"+(latest_stock_price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')+" for $"+(200*latest_stock_price).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'));
+        $("#trdl300").text("Long 300 sh @"+(latest_stock_price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')+" for $"+(300*latest_stock_price).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'));
+        $("#trdl400").text("Long 400 sh @"+(latest_stock_price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')+" for $"+(400*latest_stock_price).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'));
+        $("#trdl500").text("Long 500 sh @"+(latest_stock_price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')+" for $"+(500*latest_stock_price).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'));
+
+        $("#trds100").text("Short 100 sh @"+(latest_stock_price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')+" for $"+(100*latest_stock_price).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'));
+        $("#trds200").text("Short 200 sh @"+(latest_stock_price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')+" for $"+(200*latest_stock_price).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'));
+        $("#trds300").text("Short 300 sh @"+(latest_stock_price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')+" for $"+(300*latest_stock_price).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'));
+        $("#trds400").text("Short 400 sh @"+(latest_stock_price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')+" for $"+(400*latest_stock_price).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'));
+        $("#trds500").text("Short 500 sh @"+(latest_stock_price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')+" for $"+(500*latest_stock_price).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'));
+
+    }
     else {
         $.confirm({
             title: 'No Intraday Data',
@@ -329,53 +344,38 @@ function showHschart() {
 //  The following function will display a message about trading long
 //************************************************************************************ */
 
-function trd_long(){
+function trd_confirmation(){
 
-    // checking the number of shares to trade
-    var qty=0;
-    if ($("#option1").is(":checked")){qty=100}
-    else if($("#option2").is(":checked")){qty=200}
-    else if($("#option3").is(":checked")){qty=300}
-    else if($("#option4").is(":checked")){qty=400}
-    else if($("#option5").is(":checked")){qty=500}
+    var rtype="";
+    var rbutton="";
+    var msg="Confirmation, traded "+$(this).text();
+
+    console.log($(this).attr("trddir"));
+
+    if($(this).attr("trddir")==="Long"){
+        rtype="green";
+        rbutton="btn-green"
+    }
+    else {
+        rtype="purple";
+        rbutton="btn-purple";
+    }
     
     $.confirm({
         title: 'Trading confirmation',
-        content: 'Confirmation for trading long '+qty+' shares of '+sTickler+" - "+sName+" at a price of $"+latest_stock_price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'),
-        type: 'green',   
+        content: msg,
+        type: rtype,   
         buttons: {
-                     delete: {text: 'Got it', btnClass: 'btn-green',
+                     delete: {text: 'Got it', btnClass: rbutton,
                      action: function(){}  }
                   }
     });  // Jquery confirm
-
 }
 
-//************************************************************************************ */
-//  The following function will display a message about trading short
-//************************************************************************************ */
-
-function trd_short(){
-
-    // checking the number of shares to trade
-    var qty=0;
-    if ($("#option1").is(":checked")){qty=100}
-    else if($("#option2").is(":checked")){qty=200}
-    else if($("#option3").is(":checked")){qty=300}
-    else if($("#option4").is(":checked")){qty=400}
-    else if($("#option5").is(":checked")){qty=500}
-    
-    $.confirm({
-        title: 'Trading confirmation',
-        content: 'Confirmation for trading short '+qty+' shares of '+sTickler+" - "+sName+" at a price of $"+latest_stock_price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'),
-        type: 'purple',   
-        buttons: {
-                     delete: {text: 'Got it', btnClass: 'btn-purple',
-                     action: function(){}  }
-                  }
-    });  // Jquery confirm
-
-}
+//*********************************************************************************/
+//  Following function gets response from the stocks news API call and puts it
+//  into MD Bootrstrap for sorting
+//*********************************************************************************/
 
 function showNews(response){
  
@@ -401,18 +401,26 @@ function showNews(response){
      // Initialize table -  Required by MDBootstrap
      $('#news-list').dataTable({
         "scrollX": true,
-        "scrollY": 300
-        });
+        "scrollY": 300,
+        "show": 25,
+        "order": [[1,"desc"]],
 
-}
+        columnDefs: [
+            {targets: 4,
+            render: function (data, type, row, meta)
+            {   data = '<a href="'+data + '"target="_blank">Link</a>';
+            return data; }}]  
+
+
+     }); // datatable initialization
+
+}  // End function showNews
 
 //********************* */
 // main functionality
 //********************* */
 
 $("#back").attr("onClick","window.location.href='getstocks.html'");   // on back, it will load functon getstocks
-$("#trd-long").click(trd_long);                                       // function to cover clicking on long button
-$("#trd-short").click(trd_short);                                     //  function to cover clicking on short button
 
 var chartData = [];        // Initializes chart, required by AMD charts
 var chart;                 // Initializes chart, required by AMD charts
@@ -443,11 +451,7 @@ $.ajax({url: APIquery,success: showIDchart, error: handles_APIerror});
 showHschart();
 
 //  Assigns actions to the trading quantity buttons
-$("#trd100").click(function(){$("#trade-cost").text("Approximate trade cost $"+(100*latest_stock_price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'))});
-$("#trd200").click(function(){$("#trade-cost").text("Approximate trade cost $"+(200*latest_stock_price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'))});
-$("#trd300").click(function(){$("#trade-cost").text("Approximate trade cost $"+(300*latest_stock_price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'))});
-$("#trd400").click(function(){$("#trade-cost").text("Approximate trade cost $"+(400*latest_stock_price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'))});
-$("#trd500").click(function(){$("#trade-cost").text("Approximate trade cost $"+(500*latest_stock_price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'))});
+$(".trd-button").on("click",trd_confirmation);
 
 //  Fetching articles based on the last week of trading
 var News_base_url="https://stocknewsapi.com/api/v1"
