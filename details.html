@@ -77,13 +77,12 @@
                
                        <a href="" id="det-title" class="white-text mx-3">Stock details</a>
                        
-                       <div>   <!--don't delete, needed for formatting-->
-                       </div>  <!--don't delete, needed for formatting-->
+                       <div> </div>  <!--don't delete, needed for formatting-->
  
                    </div>
                 </div>
-                 <div class="col-sm"></div>  <!--formatting purposes only-->
-            </div>  <!-- First row ends here-->
+               <div class="col-sm"></div>  <!--formatting purposes only-->
+          </div>  <!-- First row ends here-->
  
           <!--*******************************************************************************************************-->
           <!-- Second row, it contains the search plus all other functionality                                       -->
@@ -106,23 +105,21 @@
                               <li><a href="#fragment-1"><span>Six-month stock price</span></a></li>
                               <li><a href="#fragment-2"><span>Intra-day stock price</span></a></li>
                               <li><a href="#fragment-3"><span>Last 50 News</span></a></li>
-                              <li><a href="#fragment-4"><span>Trade shares</span></a></li>
+                              <li><a href="#fragment-4"><span>Trade shares (Beta)</span></a></li>
                          </ul>
 
                          <!--********************************************************-->
                          <!--Tab 1:  Will contain the last 30 days of trading activity-->
                          <!--*********************************************************-->
                          <div id="fragment-1">
-                              <div id="charthist" style="width:100%; height:400px;">  <!--empty placeholder for graph-->
-                              </div>
+                              <div id="charthist" style="width:100%; height:400px;"></div>  <!--empty placeholder for graph-->
                          </div>  <!--end of fragment 1-->
 
                          <!--***************************************************-->
                          <!--Tab 2:  Will contain the intra-day trading activity-->
                          <!--***************************************************-->
                          <div id="fragment-2">
-                              <div id="chartdiv" style="width:100%; height:400px;">  <!--empty placeholder for graph-->
-                              </div>
+                              <div id="chartdiv" style="width:100%; height:400px;"> </div> <!--empty placeholder for graph-->
                          </div> <!-- end of fragment-2-->
 
                          <!--*********************************-->
@@ -145,65 +142,59 @@
                               </div>
                          </div>  <!--end of fragment 3-->
 
+                         <!--*************************************************-->
+                         <!--Tab 4:  Will contain trading information/options -->
+                         <!--**************************************************-->
+
                          <div id="fragment-4">
-                              <div class="row border align-items-center">
-                                   <div class="btn-group btn-group-toggle my-2 align-items-center" data-toggle="buttons">
+                              <div class="row border">
 
-                                        <div class="col-sm-1"> </div>  <!--formatting only-->
-                                        <div class="col-sm-2">
-                                             <label class="btn btn-primary form-check-label active text-trade" id="trd100">
-                                                  <input class="form-check-input" type="radio" name="options" id="option1" autocomplete="off" checked>100 shares
-                                             </label>
-                                        </div>
-
-                                        <div class="col-sm-2">
-                                             <label class="btn btn-primary form-check-label text-trade" id="trd200">
-                                                  <input class="form-check-input" type="radio" name="options" id="option2" autocomplete="off"> 200 shares
-                                             </label>
-                                        </div>
-
-                                        <div class="col-sm-2">
-                                             <label class="btn btn-primary form-check-label text-trade" id="trd300">
-                                                  <input class="form-check-input" type="radio" name="options" id="option3" autocomplete="off"> 300 shares
-                                             </label>
-                                        </div>
-
-                                        <div class="col-sm-2">
-                                             <label class="btn btn-primary form-check-label text-trade" id="trd400">
-                                                  <input class="form-check-input" type="radio" name="options" id="option4" autocomplete="off"> 400 shares
-                                             </label>
-                                        </div>
-
-                                        <div class="col-sm-2">
-                                             <label class="btn btn-primary form-check-label text-trade" id="trd500">
-                                                  <input class="form-check-input" type="radio" name="options" id="option5" autocomplete="off"> 500 shares
-                                             </label>
-                                        </div>
-                                        <div class="col-sm-1"> </div>  <!--formatting only-->
-                                   </div>  <!-- button group-->                              </div>  <!--end of first row-->
-                              <div class="row">
-                                   <div class="col-sm"></div>  <!--for formatting purposes only-->
-                                   <div class="col-sm-8">
-                                        <h4 id="trade-cost" class="text-trade">Approximate trade cost</h4>
+                                   <div class="col-sm"></div> <!--formatting purposes-->
+                                   <div class="col-sm-2 text-trade">
+                                        <button type="button" id="trdl100" trddir="Long" trdqty="100" class="trd-button btn btn-dark-green">Long 100 shares</button>
                                    </div>
-                                   <div class="col-sm"></div>  <!--for formatting purposes only-->
-                              </div>  <!--end of second row-->
+                                   <div class="col-sm-2 text-trade">
+                                        <button type="button" id="trdl200" trddir="Long" trdqty="200" class="trd-button btn btn-dark-green">Long 200 shares</button>
+                                   </div>
+                                   <div class="col-sm-2 text-trade">
+                                        <button type="button" id="trdl300" trddir="Long" trdqty="300" class="trd-button btn btn-dark-green">Long 300 shares </button>
+                                   </div>
+                                   <div class="col-sm-2 text-trade">
+                                        <button type="button" id="trdl400" trddir="Long" trdqty="400" class="trd-button btn btn-dark-green">Long 400 shares </button>
+                                   </div>
+                                    <div class="col-sm-2 text-trade">
+                                        <button type="button" id="trdl500" trddir="Long" trdqty="500" class="trd-button btn btn-dark-green">Long 500 shares </button>
+                                   </div>
+                                   <div class="col-sm"></div> <!--formatting purposes-->
+
+
+                              </div>  <!--end of first row-->
                               <div class="row border">
                                    <div class="col-sm"></div> <!--formatting purposes-->
-                                   <div class="col-sm-3 text-trade">
-                                        <button type="button" id="trd-long" class="btn btn-dark-green text-trade">Trade long</button>
+                                   <div class="col-sm-2 text-trade">
+                                        <button type="button" id="trds100" trddir="Short" trdqty="100" class="trd-button btn btn-secondary">Short 100 shares</button>
                                    </div>
-                                   <div class="col-sm-3 text-trade">
-                                        <button type="button" id="trd-short" class="btn btn-secondary">Trade short</button>
+                                   <div class="col-sm-2 text-trade">
+                                        <button type="button" id="trds200" trddir="Short" trdqty="200" class="trd-button btn btn-secondary">Short 200 shares</button>
+                                   </div>
+                                   <div class="col-sm-2 text-trade">
+                                        <button type="button" id="trds300" trddir="Short" trdqty="300" class="trd-button btn btn-secondary">Short 300 shares</button>
+                                   </div>
+                                   <div class="col-sm-2 text-trade">
+                                        <button type="button" id="trds400" trddir="Short" trdqty="400" class="trd-button btn btn-secondary">Short 400 shares</button>
+                                   </div>
+                                   <div class="col-sm-2 text-trade">
+                                        <button type="button" id="trds500" trddir="Short" trdqty="500" class="trd-button btn btn-secondary">Short 500 shares</button>
                                    </div>
                                    <div class="col-sm"></div> <!--formatting purposes-->
-                              </div>  <!--End of third row-->
+                              </div>  <!--End of second row-->
                          </div>  <!--end of fragment 4-->
 
                </div>  <!-- End of row 2, Column 2-->
-               <div class="col-sm"></div>
 
-               </div>  <!-- End of row 2-->
+               <div class="col-sm"></div>   <!-- for formatring purposes only-->
+
+          </div>  <!-- End of row 2-->
      </div>  <!-- main wrapper-->
 
 <script>$( "#tabs" ).tabs()</script>
