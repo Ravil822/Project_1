@@ -260,11 +260,17 @@ function createIDStockChart() {
 
 function showIDchart(idata) {
 
-    //  updating potential trade with the latest stock price
-    latest_stock_price=idata[idata.length-1].average;
-    var trade_cost=100*latest_stock_price;
-    $("#trade-cost").text("Approximate trade cost $"+trade_cost.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'));
+    //  updating potential trade with the latest stock price.  It will try the latest minute, and then it will go back 
+    //  until it get data that is not null
 
+    var i=idata.length-1;
+    do {
+        latest_stock_price=idata[i].average;
+        i--;
+    } while (i>=0&&latest_stock_price===null);
+    var trade_cost=100*latest_stock_price;
+
+    // If there is valid intraday data then display the information
     if (idata.length>0){
         generateIDChartData(idata);
         createIDStockChart();
@@ -349,8 +355,6 @@ function trd_confirmation(){
     var rtype="";
     var rbutton="";
     var msg="Confirmation, traded "+$(this).text();
-
-    console.log($(this).attr("trddir"));
 
     if($(this).attr("trddir")==="Long"){
         rtype="green";
