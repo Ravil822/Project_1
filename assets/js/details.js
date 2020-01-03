@@ -407,12 +407,12 @@ function showNews(response){
         "scrollX": true,
         "scrollY": 300,
         "show": 25,
-        "order": [[1,"desc"]],
+        "order": [[0,"desc"]],
 
         columnDefs: [
-            {targets: 4,
+            {targets: 2,
             render: function (data, type, row, meta)
-            {   data = '<a href="'+data + '"target="_blank">Link</a>';
+            {   data = '<a href="'+row[4] + '" target="_blank">'+data+'</a>';
             return data; }}]  
 
 
