@@ -388,12 +388,12 @@ function showNews(response){
 
 // appends items to table
     for(var i=0;i<response.data.length;i++){
-        var newnews=$("<tr>");                                                      // header.  
-        var newdate=$("<td>").text(moment(response.data[i].date).format("L"));      // date of article
-        var newsent=$("<td>").text(response.data[i].sentiment);                     // sentient of news
-        var newtitle=$("<td>").text(response.data[i].title);                        // Title of the news
-        var newsource=$("<td>").text(response.data[i].source_name);                 // Source of the news
-        var newurl=$("<td>").text(response.data[i].news_url);                       // URL for the news
+        var newnews=$("<tr>");                                                          // header.  
+        var newdate=$("<td>").text(moment(response.data[i].date).format("YYYY-MM-DD")); // date of article
+        var newsent=$("<td>").text(response.data[i].sentiment);                         // sentient of news
+        var newtitle=$("<td>").text(response.data[i].title);                            // Title of the news
+        var newsource=$("<td>").text(response.data[i].source_name);                     // Source of the news
+        var newurl=$("<td>").text(response.data[i].news_url);                           // URL for the news
         newnews.append(newdate);
         newnews.append(newsent);
         newnews.append(newtitle);
@@ -412,7 +412,7 @@ function showNews(response){
         columnDefs: [
             {targets: 2,
             render: function (data, type, row, meta)
-            {   data = '<a href="'+ row[4] + '"target="_blank">'+data+'</a>';
+            {   data = '<a href="'+row[4] + '" target="_blank">'+data+'</a>';
             return data; }}]  
 
 
