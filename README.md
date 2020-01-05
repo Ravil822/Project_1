@@ -16,13 +16,13 @@ Our application allows users to setup pre-established strategies for getting tra
 
 ## Technologies, libraries and plugins employed
 
-**Bootstrap-** Tables with search, sort, and pagination capabilities
-**Materialize-** Corporate web development
-**Jquery UI-** Simplified tabs
-**MomentJS-** Manage/format dates
-**amCharts-** Display charts with several capabilities
-**IEX api-** Historical and intra-day data  (120 API calls per day of use, 1 API call each time a stock detail is viewed)
-**Stock news API-** Stock-specific news provider (1 call per time each time a stock detail is viewed)
+- **Bootstrap -** Tables with search, sort, and pagination capabilities
+- **Materialize -** Corporate web development
+- **Jquery UI -** Simplified tabs
+- **MomentJS -** Manage/format dates
+- **amCharts -** Display charts with several capabilities
+- **IEX api -** Historical and intra-day data  (120 API calls per day of use, 1 API call each time a stock detail is viewed)
+- **Stock news API -** Stock-specific news provider (1 call per time each time a stock detail is viewed)
 
 
 
